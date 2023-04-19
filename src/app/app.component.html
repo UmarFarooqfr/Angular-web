@@ -1,0 +1,112 @@
+<p-menu #menu [model]="items" [popup]="true"></p-menu>
+  <div class="Headers" style="margin-top: 15px !important">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input type="text" pInputText placeholder="Search Here" />
+    </span>
+    <img
+      src="https://www.primefaces.org/freya-ng/assets/demo/images/avatar/square/avatar-m-1.jpg"
+      (click)="menu.toggle($event)"
+      label="Show"
+    />
+    <span class="pi pi-cog setting-butn"></span>
+    <span class="pi pi-arrow-left setting-butn"></span>
+  </div>
+  <h5 style="margin-top: 30px; font-weight: bold">E-Commerce Dashboard</h5>
+  <div class="card">
+    <p-messages
+      [(value)]="messages"
+      [enableService]="false"
+      [closable]="true"
+    ></p-messages>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="grid-data" style="min-width: 17rem !important">
+          <div class="col-12">
+            <h6>Orders</h6>
+            <h1>23</h1>
+          </div>
+          <i class="pi pi-chart-line text-3xl"></i>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div
+          class="grid-data"
+          style="
+            background-color: #14b8a6 !important;
+            min-width: 17rem !important;
+          "
+        >
+          <div class="col-12">
+            <h6 class="text-color">Revenue</h6>
+            <h1 class="text-color">$1548.26</h1>
+          </div>
+          <i class="pi pi-dollar text-3xl color"></i>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div
+          class="grid-data"
+          style="
+            background-color: #919293 !important;
+            min-width: 17rem !important;
+          "
+        >
+          <div class="col-12">
+            <h6 class="text-color">Buyer Messages</h6>
+            <h1 class="text-color">2</h1>
+          </div>
+          <i class="pi pi-envelope text-3xl color"></i>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div
+          class="grid-data"
+          style="
+            background-color: #606162 !important;
+            min-width: 17rem !important;
+          "
+        >
+          <div class="col-12">
+            <h6 class="text-color">CTR</h6>
+            <h1 class="text-color">12%</h1>
+          </div>
+          <i class="pi pi-chart-bar text-3xl color"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      class="grid-data"
+      style="
+        background-color: #ffb340 !important;
+        min-width: 17rem !important;
+        margin-left: 20px !important;
+      "
+    >
+      <div class="col-12">
+        <h6 class="text-color">Out of Stock Products</h6>
+        <h1 class="text-color">4</h1>
+      </div>
+      <i class="pi pi-box text-3xl color"></i>
+    </div>
+  </div>
+  <div class="charts-des" style="margin-left: 30px">
+    <div style="margin-top: 20px; width: 900px">
+      <app-p-chart></app-p-chart>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-6 col-lg-4 card-des">
+        <app-line-chart></app-line-chart>
+      </div>
+
+      <div class="col-sm-9 col-md-6 col-lg-8 table-des">
+        <app-p-table></app-p-table>
+      </div>
+    </div>
+  </div>

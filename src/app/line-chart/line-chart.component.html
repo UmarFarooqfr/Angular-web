@@ -1,0 +1,39 @@
+<h6>Clients</h6>
+<p>Your Clients Data</p>
+<div style="margin-left: 35px; margin-top: -12px">
+  <p-chart
+    type="line"
+    [data]="data"
+    [options]="options"
+    width="220px"
+    height="200px"
+  >
+  </p-chart>
+</div>
+<div class="main-footer-des">
+  <div class="card-footer">
+    <img
+      src="https://www.primefaces.org/freya-ng/assets/demo/images/dashboard/subtract.svg"
+    />
+    <h6>Insights</h6>
+  </div>
+  <div class="footer-info">
+    <p>1 &nbsp; Client from Mail CTA</p>
+    <span class="p-tag p-tag-warning">12%</span>
+  </div>
+  <div style="display: flex; padding: 10px">
+    <p>2 &nbsp; Clients from FB Ads</p>
+    <span
+      class="p-tag p-tag-success"
+      style="margin-left: 50px; padding-left: 10px"
+      >UF!</span
+    >
+  </div>
+  <p style="color: #293241">See all (4)</p>
+</div>
+<button
+  pButton
+  type="button"
+  label="Go to Clients Reports"
+  class="p-button-outlined"
+></button>

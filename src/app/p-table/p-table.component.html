@@ -1,0 +1,43 @@
+<div class="Headers" style="margin-bottom: 15px">
+  <div class="table-header-des">
+    <span class="p-input-icon-left">
+      <i class="pi pi-search"></i>
+      <input
+        type="text"
+        pInputText
+        placeholder="Search Here"
+        #textInput
+        (input)="dt.filterGlobal(textInput.value, 'contains')"
+      />
+    </span>
+    <span class="pi pi-upload upload"></span>
+  </div>
+</div>
+
+<p-table #dt [value]="companyProfiles" [paginator]="true"
+[filterDelay]="0" [rows]="3" [responsive]="true" [globalFilterFields]="['sector','name','thisYearSales','lastYearSales']">
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="sector">
+        Sector <p-sortIcon field="sector"></p-sortIcon>
+      </th>
+      <th pSortableColumn="name">
+        Company <p-sortIcon field="name"></p-sortIcon>
+      </th>
+      <th pSortableColumn="thisYearSales">
+        This Year Sales <p-sortIcon field="thisYearSales"></p-sortIcon>
+      </th>
+      <th pSortableColumn="lastYearSales">
+        Last Year Sales <p-sortIcon field="lastYearSales"></p-sortIcon>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>{{ product?.sector }}</td>
+      <td>{{ product?.name }}</td>
+      <td>{{ product?.thisYearSales }}</td>
+      <td>{{ product?.lastYearSales }}</td>
+    </tr>
+  </ng-template>
+</p-table>

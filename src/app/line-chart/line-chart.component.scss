@@ -1,0 +1,35 @@
+h6{
+  color: #293241;
+  margin-left: 9px;
+  margin-top: 9px;
+}
+p{
+ color: #83888f;
+}
+.card-footer{
+display: flex;
+}
+.footer-info{
+  // background-color: rgba(138, 220, 211, 0.1);
+  padding: 10px;
+  display: flex !important;
+
+}
+.main-footer-des{
+  background-color: rgba(138, 220, 211, 0.1);
+  padding: 20px;
+  border-radius: 20px;
+  width: 330px;
+  height:200px;
+}
+.p-tag{
+  border-radius: 18px;
+  width: 40px;
+  height:28px;
+  margin-left: 40px;
+}
+.p-button-outlined{
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
